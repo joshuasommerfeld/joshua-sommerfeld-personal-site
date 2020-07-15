@@ -1,31 +1,34 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
 
-import Text from "./Text";
 import EmploymentHistory from "./EmploymentHistory";
 import LandingPage from "./LandingPage";
-import {breakpoint, pallete, spacing} from "../utils/styles";
 
 import history from "../history";
+import capabilities from "../capabilities";
 import About from "./About";
 
 const ContentWrapper = styled.div``;
-const Body = styled.div`
-  padding: ${spacing.sm}
-`;
 
-const EmploymentColumn = styled.div`
-  background: ${pallete.background02};
-  width: 100%;
-`;
+const scrollToRef = (ref) => window.scrollTo({
+  top: ref.current.offsetTop,
+  left: 0,
+  behavior: 'smooth'
+});
 
+export default () => {
 
-export default () => (
-    <ContentWrapper>
-      <LandingPage />
-      <About />
-      <EmploymentColumn>
+  const aboutRef = useRef(null);
+
+  const scrollToAbout = () => scrollToRef(aboutRef);
+
+  return (
+      <ContentWrapper>
+        <LandingPage onSeeMore={scrollToAbout}/>
+        <div ref={aboutRef}>
+          <About capabilities={capabilities}/>
+        </div>
         <EmploymentHistory history={history}/>
-      </EmploymentColumn>
-    </ContentWrapper>
-)
+      </ContentWrapper>
+  )
+};

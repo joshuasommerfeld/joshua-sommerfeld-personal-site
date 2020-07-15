@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {pallete, spacing} from "../utils/styles";
 import React from "react";
 import {MdMailOutline} from "react-icons/md";
+import { AiOutlineLinkedin } from "react-icons/all";
 
 const LandingPage = styled.div`
   height: 100vh;
@@ -45,17 +46,26 @@ const MobileSubTitle = styled.h2`
   text-align: center;
 `;
 
-const EmailLink = styled.p`
+const EmailLink = styled.a`
   color: ${pallete.grey};
   text-decoration: none;
     
   display: flex;
   flex-direction: row;
   align-items: flex-end;
+  
+  margin: ${spacing.sm} 0;
 `;
 
 const EmailIcon = styled(MdMailOutline)`
-  font-size: 16px;
+  font-size: 18px;
+  color: ${pallete.grey};
+  
+  margin-right: ${spacing.sm};
+`;
+
+const LinkedInIcon = styled(AiOutlineLinkedin)`
+  font-size: 18px;
   color: ${pallete.grey};
   
   margin-right: ${spacing.sm};
@@ -69,7 +79,7 @@ const SeeMore = styled.button`
   }
   
   animation-name: buttongrow;
-  animation-duration: 5s;
+  animation-duration: 4s;
   
   font-size: 16px;
   font-weight: 700;
@@ -91,6 +101,7 @@ export default ({ onSeeMore }) => (
     <Separator/>
     <MobileSubTitle>I'm a full-stack software developer</MobileSubTitle>
     <EmailLink href="mailto:joshua.sommerfeld91@gmail.com"><EmailIcon/>joshua.sommerfeld91@gmail.com</EmailLink>
+    <EmailLink href="https://www.linkedin.com/in/joshuasommerfeld/"><LinkedInIcon />www.linkedin.com/in/joshuasommerfeld</EmailLink>
     <SeeMore onClick={onSeeMore}>Come on down</SeeMore>
   </LandingPage>
 )

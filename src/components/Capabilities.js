@@ -1,9 +1,6 @@
 import React, {Fragment} from "react";
 import styled from "styled-components";
-import {breakpoint, pallete, spacing} from "../utils/styles";
-
-import capabilities from "../capabilities";
-
+import {pallete, spacing} from "../utils/styles";
 
 const CapabilityContainer = styled.div`
   display: flex;
@@ -12,7 +9,6 @@ const CapabilityContainer = styled.div`
   
   padding: ${spacing.sm};
 `;
-
 
 const Capability = styled.span`
   background: ${pallete.highlight};
@@ -24,7 +20,7 @@ const Capability = styled.span`
   line-height: 24px;
 `;
 
-export default () => (
+export default ({ capabilities }) => (
     <Fragment>
       <CapabilityContainer>
         {capabilities.map(capability => <Capability>{capability}</Capability>)}

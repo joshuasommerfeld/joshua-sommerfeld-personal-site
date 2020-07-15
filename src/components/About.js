@@ -72,7 +72,7 @@ const Headshot = styled.div`
   height: 340px;
 `
 
-export default () => (
+export default ({ capabilities }) => (
     <Fragment>
       <AboutTitle>About</AboutTitle>
       <About>
@@ -85,7 +85,7 @@ export default () => (
                 <AboutText>I have a diverse set of capabilities in the fields of cloud based application development, web development
                   and data analytics.</AboutText>
                 <CapabilitiesTitle>Capabilities</CapabilitiesTitle>
-                <Capabilities />
+                <Capabilities capabilities={capabilities}/>
               </div>
             </HeadshotDescription>
           </AboutLayout>
