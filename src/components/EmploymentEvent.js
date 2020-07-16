@@ -1,8 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import {spacing, pallete} from "../utils/styles";
+import {spacing, pallete, breakpoint} from "../utils/styles";
 import Hero from "./Hero";
+
+const EventLayout = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-left: ${spacing.lg};
+  
+  ${breakpoint.md`
+    padding-left: 0;
+    grid-template-columns: 110px 1fr;
+  `}
+`;
 
 const EventContainer = styled.div`
   padding: ${spacing.md};
@@ -15,18 +26,37 @@ const EventBody = styled.div`
   
   display: grid;
   grid-template-rows: auto auto 1fr;
+  
+  padding: 0 ${spacing.md};
 `;
 
 const Title = styled.h3`
   color: ${pallete.text};
-  
-  margin: ${spacing.xxs} ${spacing.md};
+  margin: ${spacing.sm} 0;
+`;
+
+const DesktopDateContainer = styled.div`
+  display: none;
+  ${breakpoint.md`
+    display: block;
+  `}
+`;
+
+const MobileDateContainer = styled.div`
+  display: block;
+  ${breakpoint.md`
+    display: none;
+  `}
 `;
 
 const Date = styled.h4`
   color: ${pallete.text};
-  
-  margin: ${spacing.xxs} ${spacing.lg};
+  font-weight: 600;
+  margin: 0;
+  ${breakpoint.md`
+    color: ${pallete.inverse};
+    margin: 38px 0;
+  `}
 `;
 
 const Body = styled.div`
@@ -48,13 +78,21 @@ export default ({
     timelineColor
 }) => {
   return (
-    <EventContainer timelineColor={timelineColor}>
-      { icon && <EventIcon><Hero uri={icon} /></EventIcon>}
-      <EventBody>
-        <Title>{title}</Title>
-        <Date>{date}</Date>
-        <Body>{description}</Body>
-      </EventBody>
-    </EventContainer>
+      <EventLayout>
+        <DesktopDateContainer>
+          <Date>{date}</Date>
+        </DesktopDateContainer>
+        <EventContainer timelineColor={timelineColor}>
+          { icon && <EventIcon><Hero uri={icon} /></EventIcon>}
+          <EventBody>
+            <Title>{title}</Title>
+            <MobileDateContainer>
+              <Date>{date}</Date>
+            </MobileDateContainer>
+            <Body>{description}</Body>
+          </EventBody>
+        </EventContainer>
+      </EventLayout>
+
   )
 }

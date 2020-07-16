@@ -81,9 +81,14 @@ export default ({ capabilities }) => (
             <HeadshotDescription>
               <Headshot uri="https://i.imgur.com/6GOMYO7.jpg" />
               <div>
-                <AboutText>I'm an energetic, passionate, outcome focused software developer hailing from Melbourne, Australia.</AboutText>
-                <AboutText>I have a diverse set of capabilities in the fields of cloud based application development, web development
-                  and data analytics.</AboutText>
+                <AboutText>
+                  I'm an energetic, passionate, outcome focused software developer hailing from Melbourne, Australia.
+                  I have a diverse set of capabilities in the fields of cloud based application development, web development and data analytics.
+                </AboutText>
+                <AboutText>
+                  I also make a bunch of music, design and run tabletop role playing games and am a published board game designer as my side hustle.
+                  Hit me up if you want to talk nerdy!
+                </AboutText>
                 <CapabilitiesTitle>Capabilities</CapabilitiesTitle>
                 <Capabilities capabilities={capabilities}/>
               </div>

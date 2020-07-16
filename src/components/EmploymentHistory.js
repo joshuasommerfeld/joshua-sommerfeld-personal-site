@@ -12,7 +12,7 @@ const EmploymentTitle = styled.h3`
 
 const EmploymentInner = styled.div`
   background: ${pallete.background02};
-  padding: ${spacing.sm} ${spacing.xl};
+  padding: ${spacing.sm};
   max-width: 700px;
   margin: auto;
 `;
