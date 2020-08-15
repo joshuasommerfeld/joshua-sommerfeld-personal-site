@@ -16,7 +16,7 @@ const history = [
     icon: 'https://imgur.com/teYoGxR.jpg'
   },
   {
-    title: 'Become co-founder of the Swinburne Game Jam',
+    title: 'Co-founder of the Swinburne Game Jam',
     date: 'Feb 2012',
     description: (
         <Text>

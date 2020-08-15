@@ -23,19 +23,17 @@ const MobileTitle = styled.h1`
 
 const Separator = styled.div`
   @keyframes grow {
-    0% { width: 0; border-width: 1px; }
-    50% { width: 100%; border-width: 10px; }
-    80% { width: 100%; border-width: 10px; }
-    95% { width: 0%; border-width: 1px; } 
+    0% { width: 0; border-width: 0px; }
+    10% { width: 0; border-width: 1px; }
+    100% { width: 100%; border-width: 10px; }
   }
   
   animation-name: grow;
-  animation-delay: 2s;
-  animation-duration: 6s;
-  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  animation-duration: 4s;
 
-  border-bottom: 2px solid ${pallete.inverse};
-  width: 0%;
+  border-bottom: 10px solid ${pallete.inverse};
+  width: 100%;
   height: 10px;
   
   transition: width 2s ease-out;
@@ -86,7 +84,7 @@ const SeeMore = styled.button`
   color: ${pallete.inverse};
   background: ${pallete.background02};
   
-  margin-top: 200px;
+  margin-top: 20vh;
   padding: ${spacing.md};
   border: 5px solid ${pallete.inverse};
 `;
