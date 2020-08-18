@@ -74,7 +74,7 @@ const Headshot = styled.div`
 
 export default ({ capabilities }) => (
     <Fragment>
-      <AboutTitle>About</AboutTitle>
+      <AboutTitle data-testid="about-title">About</AboutTitle>
       <About>
         <AboutInner>
           <AboutLayout>

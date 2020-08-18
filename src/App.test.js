@@ -1,9 +1,12 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('Come on down works as expected.', () => {
   const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const linkElement = getByText(/Come on down/i);
+  global.scrollTo = jest.fn()
+
+  fireEvent.click(linkElement);
+  expect(global.scrollTo).toHaveBeenCalled();
 });
