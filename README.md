@@ -1,4 +1,16 @@
+# Joshua Sommerfeld Personal Site
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+It is built with styled-components, defining CSS via JS. 
+
+The timeline is interpreted from the items in `history.js`.
+
+It is integrated with AWS Amplify for deployment.
+
+## Deployment
+
+To deploy, you simply need to run `amplify publish` from the root directory.
 
 ## Available Scripts
 
