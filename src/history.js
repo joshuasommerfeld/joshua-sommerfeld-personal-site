@@ -7,9 +7,8 @@ const history = [
     date: 'Jan 2010',
     description: (
         <Fragment>
-          <Text>Bachelor of Multimedia (Games and Interactivity) / Bachelor of Science (Computer Science and Software
-            Engineering) </Text>
           <Text>Swinburne University</Text>
+          <Text>Bachelor of Multimedia (Games and Interactivity) / Bachelor of Science (Computer Science and Software Engineering)</Text>
         </Fragment>
     ),
     timelineColor: '',
@@ -23,9 +22,11 @@ const history = [
           Organised the first ever Swinburne Student Game Jam competition.
           It involved organising upwards of 30 students to participate in an intense 48 hour competition where they
           develop a game from scratch based on a shared theme.
+          <br/><br/>
           Judges from the industry were brought in to help judge the competition.
           This remains a staple event at the university to this day.
-        </Text>),
+        </Text>
+    ),
     timelineColor: '',
     icon: ''
   },
@@ -36,8 +37,10 @@ const history = [
         <Text>
           Joined ObjectMastery (<a href="https://www.integradev.com.au/">now IntegraDev</a>) as an IBL (Industry Based
           Learning) student as part of my coursework at Swinburne University.
+          <br/>
           This was an optional year of learning on the job for high performing students.
-        </Text>),
+        </Text>
+    ),
     timelineColor: '#def',
     icon: 'https://i.imgur.com/PGyQesc.png'
   },
@@ -56,7 +59,8 @@ const history = [
           </ul>
           In this role I developed largely in Delphi and Javascript, integrating with Postgres and a few proprietary
           data storage formats.
-        </Text>),
+        </Text>
+    ),
     timelineColor: '#def',
     icon: ''
   },
@@ -64,8 +68,11 @@ const history = [
     title: 'Gained Bachelor of Multimedia / Bachelor of Science',
     date: 'Feb 2016',
     description: (
-        <Text>Finished my double degree of Bachelor of Multimedia (Games and Interactivity) / Bachelor of Science
-          (Computer Science and Software Engineering) at Swinburne University</Text>),
+        <Text>
+          Finished my double degree of Bachelor of Multimedia (Games and Interactivity) / Bachelor of Science
+          (Computer Science and Software Engineering) at Swinburne University.
+        </Text>
+    ),
     timelineColor: '',
     icon: 'https://imgur.com/teYoGxR.jpg'
   },
@@ -78,9 +85,10 @@ const history = [
             I began work at Alex Solutions as a full stack developer.
             I worked on a suite of metadata management products that allowed customers to scrape their existing data
             environments to gain a visually explorable catalogue of their data assets.
-          </Text>
-          <Text>I worked in Java, Scala, Neo4j (CQL) and SQL. I developed integrations with a great number of
-            technologies; Oracle, MySQL, Postgres, Teradata, S3, SAP and more.</Text>
+            <br/><br/>
+            I worked in Java, Scala, Neo4j (CQL) and SQL. I developed integrations with a great number of
+            technologies; Oracle, MySQL, Postgres, Teradata, S3, SAP and more.
+            </Text>
         </Fragment>
     ),
     timelineColor: '#f05724',
@@ -95,8 +103,7 @@ const history = [
             I worked on a group of analytic tools to enhance the base Alex metadata management suite.
             This involved scanning customer data assets for PII, PCI and PHI, as well as collecting statistical metadata
             intended to help data scientists locate and remediate pain points in their data landscape.
-          </Text>
-          <Text>
+            <br/><br/>
             Basically I created a bunch of tools to help companies find PII data they had lost track of, or identify
             where they had really bad data that was driving their core decision making processes.
           </Text>
@@ -110,9 +117,9 @@ const history = [
     date: 'Jun 2017',
     description: (
         <Fragment>
-          <Text>Began work on creating Neural Nets that could predict the type of information stored in data warehouses
-            based on scraped and derived metadata.</Text>
           <Text>
+            Began work on creating Neural Nets that could predict the type of information stored in data warehouses based on scraped and derived metadata.
+            <br/><br/>
             These models were primarily used to perform sweeps of data warehouses to discover potential sources of PII
             that were improperly stored before the Australian Privacy Principles came into effect.
             These cleanup activities were undertaken on site for several clients of Alex Solutions.
@@ -126,8 +133,10 @@ const history = [
     title: 'Developer at REA',
     date: 'Sep 2018',
     description: (
-        <Text>Began work as a full stack developer with REA Group. I worked on the "agent match" suite of products
-          aiming to match property vendors with the perfect real esate agent.</Text>
+        <Text>
+          Began work as a full stack developer with REA Group.
+          I worked on the "agent match" suite of products aiming to match property vendors with the perfect real esate agent.
+        </Text>
     ),
     timelineColor: '#e4002b',
     icon: 'https://i.imgur.com/ppD0MCPm.png'
@@ -136,11 +145,35 @@ const history = [
     title: 'Senior Developer at REA',
     date: 'July 2019',
     description: (
-        <Text>Was promoted to senior developer at REA Group. My responsibilities grew to include data analytics and OKR
-          data monitoring. I also began working in the ratings and reviews space for realestate.com.au</Text>
+        <Text>
+          I Was promoted to senior developer at REA Group.
+          My responsibilities grew to include data analytics and OKR data monitoring.
+          <br/>
+          <br/>
+          I also began working in the ratings and reviews space for realestate.com.au.
+        </Text>
     ),
     timelineColor: '#e4002b',
     icon: ''
+  },
+  {
+    title: 'Senior Developer at Be Collective',
+    date: 'Mar 2021',
+    description: (
+        <Text>
+          At Be Collective I lead a project aiming to holistically improve their deployment strategy.
+          This involved not only adjusting the ways of working within the development team, but also liasing with stakeholders and sales staff in order to communicate deployments better.
+          <br/>
+          <br/>
+          The outcome was successful.
+          Where the team formerly performed a deployment every two weeks, and that deployment took a developer an entire day to complete, they now could deploy multiple times per day at the push of a button.
+          <br/>
+          <br/>
+          I became intimately familiar with Semaphore CI, as well as the many varied ways Be Collective hosted and deployed their myriad systems, both current and legacy, in AWS.
+        </Text>
+    ),
+    timelineColor: '#70af97',
+    icon: 'https://i.imgur.com/ZyKoePH.png'
   },
 ];
 

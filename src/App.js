@@ -8,7 +8,6 @@ const AppBackground = styled.div`
   * {
     box-sizing: border-box;
     overflow: auto;
-      font-family: Arial;
   }
   
   background: ${pallete.background01};

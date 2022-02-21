@@ -52,10 +52,11 @@ const MobileDateContainer = styled.div`
 const Date = styled.h4`
   color: ${pallete.text};
   font-weight: 600;
-  margin: 0;
+  margin: 0 32px 0 0;
+  text-align: right;
   ${breakpoint.md`
     color: ${pallete.inverse};
-    margin: 38px 0;
+    margin: 38px 32px 0 0;
   `}
 `;
 
